@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/motion_contoller.dart';
+import 'package:flutter_application_1/shimmer_screen.dart';
 import 'package:get/get.dart';
 
 class MotionTabBr extends StatelessWidget {
@@ -15,6 +16,7 @@ class MotionTabBr extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.grey[800],
       ),
+      body: const ShimmerEffectScreen(),
       floatingActionButton: FloatingActionButton(
         elevation: 0,
         backgroundColor: Colors.grey[800],
@@ -42,12 +44,6 @@ class MotionTabBr extends StatelessWidget {
           //other params
         );
       }),
-      body: SizedBox(
-        width: Get.width,
-        child: Column(
-          children: const [],
-        ),
-      ),
     );
   }
 }

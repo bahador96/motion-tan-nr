@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bindings/bindings.dart';
 import 'package:flutter_application_1/motion_tab_bar_screen.dart';
+import 'package:flutter_application_1/shimmer_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -21,6 +22,10 @@ class MyApp extends StatelessWidget {
           name: '/motion',
           page: () => const MotionTabBr(),
         ),
+        // GetPage(
+        //   name: '/shimmer',
+        //   page: () => const ShimmerEffectScreen(),
+        // )
       ],
       initialRoute: '/motion',
     );
