@@ -15,17 +15,16 @@ class ShimmerEffectScreen extends StatelessWidget {
         onPressed: () {
           Get.find<ShimmerController>().toggle();
         },
-        child: const Icon(
-          Icons.toggle_off,
-          color: Colors.white,
-        ),
+        child: Obx(() => Icon(
+              Get.find<ShimmerController>().isLoading.value
+                  ? Icons.toggle_off
+                  : Icons.toggle_on,
+              color: Colors.white,
+            )),
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
         width: Get.width,
-        // decoration: BoxDecoration(
-        //   color: Colors.red,
-        // ),
         child: ListView.separated(
             itemBuilder: (context, index) {
               var delay = (index * 300);
